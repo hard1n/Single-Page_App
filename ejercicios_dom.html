@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas JS</title>
+    <link href="./css/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+    <!-- Sin descargar los archivos CSS con cdnjs.com -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.css" integrity="sha512-W4KOSUNkQhX7JkalSiTkwAIoqsAvxDdgRc/WAa5U0R2TKTpHnNZuf9AiBk8InN4GCAMwer+O9fe4ThxIQFkOGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- <script defer src="./index.js"></script> -->
+</head>
+<body>
+    <section class="nav-modal">
+        <nav class="nav-modal__container">
+            <div class="btn-modal"><a class="item-link" href="#section-1">Reloj Digital y Alarma sonora</a></div>
+            <div class="btn-modal"><a class="item-link" href="#section-2">Eventos del teclado</a></div>
+            <div class="btn-modal"><a class="item-link" href="#section-3">Cuenta Regresiva</a></div>
+            <div class="btn-modal"><a class="item-link" href="#section-4">Responsive con JavaScript</a></div>
+            <div class="btn-modal"><a class="item-link" href="#section-5">Responsive Tester</a></div>
+        </nav>
+    </section>
+    <header class="header">
+        <h1 class="title">Ejercicios del DOM</h1>
+    </header>
+    <main>
+        <section class="section" id="section-1">
+            <header class="section__header">
+                <h2 class="sect__title">Reloj Digital y Alarma sonora</h2>
+            </header>
+            <section class="section__main">
+                <div class="clock-alarm-actions">
+                    <span id="clock-display"></span>
+                    <audio src="./assets/media/alarma_sonido.mp3" id="audio-elmt" loop></audio>
+                </div>
+                <div class="clock__btns">
+                    <button class="sect__btn" id="start-clock">Iniciar Reloj</button>
+                    <button class="sect__btn" id="stop-clock">Detener Reloj</button>
+                </div>
+                <div class="alarm__btns">
+                    <button class="sect__btn" id="start-alarm">Iniciar Alarma</button>
+                    <button class="sect__btn" id="stop-alarm">Detener Alarma</button>
+                </div>
+            </section>
+        </section>
+        <section class="section" id="section-2">
+            <h2 class="sect__title">Eventos del teclado</h2>
+            <section class="key-tracker-container">
+                <div class="key-tracker__pointer" id="ball-pointer">
+                    <span class="arrow icon-arrow-up" id="up"></span>
+                    <span class="arrow icon-arrow-left" id="left"></span>
+                    <span class="arrow icon-arrow-right" id="right"></span>
+                    <span class="arrow icon-arrow-down" id="down"></span>
+                </div>
+            </section>
+        </section>
+        <section class="section" id="section-3">
+            <h2 class="sect__title">Cuenta Regresiva</h2>
+            <secttion class="section__main">
+                <div class="countdown__header">
+                    <input type="date" name="date" id="countdown-date">
+                    <button class="sect__btn countdown-btn" id="countdown-btn" disabled>Cambiar fecha</button>
+                </div>
+                <div class="countdown__display">
+                    <h3 id="display-title"></h3>
+                    <h3 id="display-days"></h3>
+                    <h3 id="display-hours"></h3>
+                    <h3 id="display-min"></h3>
+                    <h3 id="display-sec"></h3>
+
+                    <!-- <button class="sect__btn" id="start-clock">Ingresar fecha</button>
+                    <button class="sect__btn" id="stop-clock">Detener Reloj</button> -->
+                </div>
+            </secttion>
+        </section>
+        <section class="section" id="section-4">
+            <h2 class="sect__title">Responsive con JavaScript</h2>
+            <div class="section__div" id="youtube"></div>
+            <div class="section__div" id="gmaps"></div>
+        </section>
+        <section class="section" id="section-5">
+            <h2 class="sect__title">Responsive Tester</h2>
+            <form action="" class="section__form" id="responsive-tester">
+                <input class="form__input" id="fm-input-url" name="direccion" type="url" placeholder="URL" required>
+                <input class="form__input" id="fm-input-width" name="ancho" type="number" min="100" placeholder="Ancho">
+                <input class="form__input" id="fm-input-height" name="alto" type="number" min="100" placeholder="Alto">
+                <div class="form__btn-container">
+                    <input name="abrir" class="sect__btn form__btn" id="open-win-btn" type="submit" value="Probar">
+                    <input name="cerrar" class="sect__btn form__btn" id="close-win-btn" type="button" value="Cerrar">
+                    <!-- <button class="sect__btn form__btn" id="></button> -->
+                </div>
+            </form>
+        </section>
+        <footer class="footer">
+            <button class="footer__btn dm-toggle-btn" type="button" id="dark-mode-btn">
+                <!-- &#x263E; -->
+                <span class="icon-lightbulb-on-off dm__lightbulb"></span>
+                <!-- <span class="dm-toggle__icon" aria-disabled="true">&#x263E;</span> -->
+                <!-- <span class="dm__sun" aria-disabled="true">&#x263C;</span> -->
+            </button>
+            <div class="footer__right">
+                <button class="footer__btn scroll-up__btn btn-hidden" type="button" id="scroll-up-btn">
+                    <span class="arrow-up-icon icon-slim-arrow-up"></span>
+                </button>
+                <button id="btn-menu" class="footer__btn hamburger hamburger--squeeze" type="button">
+                    <span class="hamburger-box" aria-disabled="true">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </footer>
+    </main>
+    <script src="./js/index.js" type="module"></script>
+</body>
+</html>
