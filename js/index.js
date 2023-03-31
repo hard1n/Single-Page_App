@@ -2,10 +2,13 @@ import hamburgerMenu from "./menu_hamburguesa.js";
 import { clock, alarm } from "./reloj_alarma.js";
 import { moveBall, cleanArrows, shortCuts } from "./eventos_teclado.js";
 import { countDown, changeDate } from "./countdown.js";
-import scrollUp from "./scroll_up_btn.js";
+import scrollTop from "./scroll_top.js";
 import darkModeToggle from "./dark_mode.js";
 import responsiveMedia from "./objeto_responsive.js";
 import responsiveTester from "./responsive_tester.js";
+import userDiveceInfo from "./device_detection.js";
+import networkStatus from "./network_status.js";
+import webcamDetection from "./detecting_webcam.js";
 
 const d = document;
 
@@ -18,11 +21,11 @@ d.addEventListener("DOMContentLoaded", e => {
     // Funcion del boton del countdown
     changeDate("#countdown-date", "#countdown-btn");
     // Funcion del boton scroll-up
-    scrollUp("scroll-up-btn");
+    scrollTop("scroll-up-btn");
     // Funcion para cargar contenido responsive en Mobile y Desktop
     // Video
     responsiveMedia("youtube", 
-    "(min-width: 1024px)", 
+    "(min-width:1020px)", 
     `<a href="https://youtu.be/JjU-4lFPSDQ" target="_blank">Película: Difícil Para Salir (YouTube)</a>`, 
     `<h3>Película: Dificil Para Salir</h3><iframe width="560" height="315" src="https://www.youtube.com/embed/JjU-4lFPSDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`);
     // Mapa
@@ -33,6 +36,10 @@ d.addEventListener("DOMContentLoaded", e => {
     // Funcion para testear Responsive
     // responsiveTester("fm-input-url", "fm-input-width", "fm-input-height", "open-win-btn", "close-win-btn");
     responsiveTester("responsive-tester");
+    // Detección de dispositivos
+    userDiveceInfo("user-device");
+    // Deteccion de la webcam
+    webcamDetection("webcam");
 });
 
 d.addEventListener("keydown", e => {
@@ -48,3 +55,5 @@ d.addEventListener("change", e => {
 
 // Funcion dark-mode
 darkModeToggle("dark-mode-btn");
+// Función status de Red
+networkStatus();

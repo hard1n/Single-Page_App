@@ -8,6 +8,7 @@
     <link href="./css/hamburgers-master/dist/hamburgers.css" rel="stylesheet">
     <!-- Sin descargar los archivos CSS con cdnjs.com -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.css" integrity="sha512-W4KOSUNkQhX7JkalSiTkwAIoqsAvxDdgRc/WAa5U0R2TKTpHnNZuf9AiBk8InN4GCAMwer+O9fe4ThxIQFkOGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/main.css">
     <!-- <script defer src="./index.js"></script> -->
@@ -20,6 +21,8 @@
             <div class="btn-modal"><a class="item-link" href="#section-3">Cuenta Regresiva</a></div>
             <div class="btn-modal"><a class="item-link" href="#section-4">Responsive con JavaScript</a></div>
             <div class="btn-modal"><a class="item-link" href="#section-5">Responsive Tester</a></div>
+            <div class="btn-modal"><a class="item-link" href="#section-6">Detección de Dispositivos</a></div>
+            <div class="btn-modal"><a class="item-link" href="#section-7">Detección de Cámara Web</a></div>
         </nav>
     </section>
     <header class="header">
@@ -83,7 +86,7 @@
         <section class="section" id="section-5">
             <h2 class="sect__title">Responsive Tester</h2>
             <form action="" class="section__form" id="responsive-tester">
-                <input class="form__input" id="fm-input-url" name="direccion" type="url" placeholder="URL" required>
+                <input class="form__input" title="Ingresar una URL" id="fm-input-url" name="direccion" type="url" placeholder="URL" required>
                 <input class="form__input" id="fm-input-width" name="ancho" type="number" min="100" placeholder="Ancho">
                 <input class="form__input" id="fm-input-height" name="alto" type="number" min="100" placeholder="Alto">
                 <div class="form__btn-container">
@@ -93,6 +96,24 @@
                 </div>
             </form>
         </section>
+        <section class="section" id="section-6">
+            <h2 class="sect__title">Detección de dispositivos (User Agent)</h2>
+            <div class="info-container" id="user-device"></div>
+        </section>
+        
+        <!-- WebCam -->
+        <section class="section" id="section-7">
+            <h2 class="sect__title">Detección de Cámara Web</h2>
+            <div class="custom-player">
+                <video class="video-webcam" id="webcam" style=" max-width: 560px; max-height: 315px;">
+                </video>
+                <!-- <button onclick="play(event)"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
+                <button onclick="download(event)"><i class="fa fa-cloud-download"></i></button>
+                <button onclick="download(event)"><i class="fa fa-cloud-download"></i></button> -->
+            </div>
+        </section>
+
+        <!-- Footer -->
         <footer class="footer">
             <button class="footer__btn dm-toggle-btn" type="button" id="dark-mode-btn">
                 <!-- &#x263E; -->

@@ -42,6 +42,7 @@ body {
 .section {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 0 auto;
     padding: 2rem 0;
     width: 100%;
@@ -124,7 +125,7 @@ body {
     /*Desde derecha */
     opacity: 0;
     transform: translate(100%, 0);
-    transition: transform 0.4s ease, opacity 0.3s ease;
+    transition: 0.4s ease, opacity 0.3s ease;
     z-index: 998;
 }
 
@@ -147,6 +148,7 @@ body {
     justify-content: center;
     padding: 1rem;
     color: var(--main-color);
+    text-align: center;
     text-decoration: none;
     font-size: 2rem;
     margin: 0 auto;
@@ -379,3 +381,97 @@ body {
     height: 38px;
     width: 58px;
 }
+
+/**** User Agent ****/
+.info-container {
+    /* display: flex;
+    flex-direction: column; */
+    text-align: center;
+}
+ /**** Conection status ****/
+ .conect-status {
+    background-color: darkred;
+    /* border: 1px solid red; */
+    /* border-radius: 0.5rem; */
+    /* box-shadow: inset 0 0 0 0 darkred; */
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    /* display: flex;
+    align-items: center; */
+    padding: 0.5rem;
+    position: fixed;
+    top: 0;
+    transform: translateY(-100%);
+    transition: 1s ease-in-out;
+    width: 100%;
+    z-index: 1000;
+ }
+ 
+ .conect-text {
+    transition: ease-in-out;
+ }
+
+ .conect-status.off {
+    animation: text-animated 5s both;
+    background-color: darkred;
+ }
+
+ .conect-status.on {
+    animation: text-animated 5s both;
+    background-color: green;
+ }
+
+ .icon-container {
+    font-size: 2rem;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top: 0;
+    margin: 1vw;
+    z-index: 999;
+ }
+ .conect-icon {
+    animation: icon-animated infinite;
+    color: red;
+    transition: 1s ease-in-out;
+    /* position: absolute; */
+ }
+
+ /* icon animation */
+ @keyframes icon-animated {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+    /* from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    } */
+  }
+
+  @keyframes text-animated {
+    0% {
+      transform: translateY(-100%);
+    }
+    
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+      }
+  }
+
+ /**** Webcam Detection ****/
+ .video-webcam {
+    border: thin solid var(--main-color);
+ }
