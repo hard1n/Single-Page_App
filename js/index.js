@@ -9,6 +9,7 @@ import responsiveTester from "./responsive_tester.js";
 import userDiveceInfo from "./device_detection.js";
 import networkStatus from "./network_status.js";
 import webcamDetection from "./detecting_webcam.js";
+import videoPlayer from "./custom_video-player.js";
 
 const d = document;
 
@@ -25,7 +26,7 @@ d.addEventListener("DOMContentLoaded", e => {
     // Funcion para cargar contenido responsive en Mobile y Desktop
     // Video
     responsiveMedia("youtube", 
-    "(min-width:1020px)", 
+    "(min-width:1024px)", 
     `<a href="https://youtu.be/JjU-4lFPSDQ" target="_blank">Película: Difícil Para Salir (YouTube)</a>`, 
     `<h3>Película: Dificil Para Salir</h3><iframe width="560" height="315" src="https://www.youtube.com/embed/JjU-4lFPSDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`);
     // Mapa
@@ -40,6 +41,8 @@ d.addEventListener("DOMContentLoaded", e => {
     userDiveceInfo("user-device");
     // Deteccion de la webcam
     webcamDetection("webcam");
+    // Custom Video Player
+    videoPlayer('webcam','player-controls','toggle-play-btn','capture-btn','pic-in-btn')
 });
 
 d.addEventListener("keydown", e => {

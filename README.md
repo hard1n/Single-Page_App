@@ -15,3 +15,4 @@ Made this app to practice vanilla JavaScript.
 6. Device Detection
 7. Conection Status Detetion
 8. Webam Detection
+9. Custom Video Player

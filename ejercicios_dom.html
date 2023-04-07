@@ -101,15 +101,18 @@
             <div class="info-container" id="user-device"></div>
         </section>
         
-        <!-- WebCam -->
+        <!-- WebCam Detection -->
         <section class="section" id="section-7">
             <h2 class="sect__title">Detección de Cámara Web</h2>
             <div class="custom-player">
-                <video class="video-webcam" id="webcam" style=" max-width: 560px; max-height: 315px;">
+                <video class="video-webcam" id="webcam" style="width: 100%; max-height: 315px;" autoplay>
                 </video>
-                <!-- <button onclick="play(event)"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
-                <button onclick="download(event)"><i class="fa fa-cloud-download"></i></button>
-                <button onclick="download(event)"><i class="fa fa-cloud-download"></i></button> -->
+                <div class="player__controls" id="player-controls">
+                    <button class="player__btn" id="toggle-play-btn"><i class="icon-pause"></i></button>
+                    <button class="player__btn" id="capture-btn"><i class="icon-camera"></i></button>
+                    <button class="player__btn" id="dload-btn" onclick="download(event)"><i class="fa fa-cloud-download"></i></button>
+                    <button class="player__btn" id="pic-in-btn"><i class="icon-picture_in"></i></button>
+                </div>
             </div>
         </section>
 
