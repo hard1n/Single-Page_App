@@ -8,7 +8,7 @@
     --main-color: #F7DF1E;
     --second-color: #222;
     --main-color-modal: rgba(247, 222, 30, 0.8);
-    --second-color-modal: rgba(34, 34, 34, 0.8);
+    --second-color-modal: rgba(34, 34, 34, 0.9);
 
     --font-color: #000;
     --bg-color: #fff;
@@ -25,6 +25,10 @@ body {
     background-color: var(--bg-color);
     color: var(--font-color);
     transition: 0.2s ease-in-out;
+    
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--second-color) var(--main-color);
 }
 
 /*** Estilos Generales ***/
@@ -43,8 +47,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 0 auto;
-    padding: 2rem 0;
+    text-align: center;
     width: 100%;
     min-height: 100vh;
     max-width: var(--container-width);
@@ -60,8 +65,22 @@ body {
     text-align: center;
     margin: 1rem 0;
 }
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 5px;
+}
 
-.footer {
+::-webkit-scrollbar-track {
+    background-color: var(--second-color);
+    /* background-color: transparent; */
+}
+
+::-webkit-scrollbar-thumb  {
+    background-color: var(--main-color);
+    border-radius: 8px;
+}
+
+/* .footer {
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -70,9 +89,9 @@ body {
     padding: 5px;
     /* left: 1vw;
     right: 1vw;
-    bottom: 1vh; */
+    bottom: 1vh; /
     z-index: 999;
-}
+} */
 
 .footer__right {
     display: grid;
@@ -126,6 +145,7 @@ body {
     opacity: 0;
     transform: translate(100%, 0);
     transition: 0.4s ease, opacity 0.3s ease;
+    height: 100vh;
     z-index: 998;
 }
 
@@ -138,8 +158,9 @@ body {
     /* background-color: rgba(0, 0, 0, .7); */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: 100%;
     width: 100vw;
 }
 
@@ -158,15 +179,15 @@ body {
 .item-link:hover {
     background-color: var(--main-color);
     color: var(--second-color-modal);
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 #btn-menu {
     display: grid;
     place-content: center;
-    /* position: fixed;
+    position: fixed;
     right: 1vw;
-    bottom: 1vh; */
+    bottom: 1vh;
     z-index: 999;
 }
 
@@ -284,6 +305,9 @@ body {
 
 /***** Scroll Up btn *****/
 .scroll-up__btn {
+    position: fixed;
+    right: calc(65px - 1vw);
+    bottom: 1vh;
     transform: translate(0, 100%);
 }
 
@@ -302,6 +326,12 @@ body {
 }
 
 /***** Dark Mode *****/
+#dark-mode-btn {
+    position: fixed;
+    left: 1vw;
+    bottom: 1vh;
+}
+
 .dark-mode {
     --second-color: #000;
     --font-color: #F7DF1E;
@@ -484,7 +514,7 @@ body {
 
  .player__controls {
     background: rgb(0,0,0);
-    background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 10%, transparent 30%);
+    background: linear-gradient(360deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 15%, transparent 30%);
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -512,3 +542,128 @@ body {
     height: 3rem;
     width: 3.5rem;
  }
+
+ /*** Search section***/
+.search-filter{
+    background-color: var(--second-color);
+    border: solid thin gray;
+    border-radius: 28px;
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 0.5rem 2rem;
+    padding: 0 1rem;
+    outline: none;
+    height: 38px;
+    width: 50%;
+}
+::-webkit-search-cancel-button {
+    background: gray;
+}
+
+.cards-container {
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    /* border: thin solid #fff; */
+    padding: 1rem;
+    width: 100%;
+}
+
+.card {
+    background-color: var(--second-color);
+    color: var(--main-color);
+    display: inline-block;
+    justify-self: center;
+    margin: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    max-width: 200px;
+}
+
+.card figcaption {
+    padding: 1rem;
+}
+
+.hide {
+    display: none;
+    /* visibility: hidden;
+    opacity: 0;
+    order: 1; */
+}
+
+/*** Giveaway section***/
+.list-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+}
+
+.list-container li{
+    list-style: none;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.list-left {
+    text-align: left;
+}
+
+.list-right {
+    text-align: right;
+}
+
+.ran-select {
+    border: solid thin var(--font-color);
+    transform: scale(1.5);
+}
+
+/*** Section Img Slider***/
+.slider {
+    perspective: 2000px;
+    width: 100%;
+}
+
+.slides-container {
+    background-image: url(../assets/imgs/RicknMorty/green-portal.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+
+    /* transform-style: preserve-3d; */
+    /* transition: 700ms; */
+}
+
+.slide {
+    /* display: none; */
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: auto;
+    transition: all 0.6s ease-in-out;
+    transform: translateY(100%);
+    width: auto;
+    opacity: 0;
+
+
+    /* adaptar la img al contenedor
+    height: inherit;
+    width: inherit;
+    object-fit: cover; */
+}
+
+.active {
+    /* display: block; */
+    /* top: 0; */
+    /* transform: rotateX(0deg); */
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.slider-btn {
+    background-position: center;
+    background-repeat: no-repeat;
+}

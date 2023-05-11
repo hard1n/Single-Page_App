@@ -1,0 +1,18 @@
+.nav-modal {
+    width: 250px;
+    right: 0;
+}
+
+.nav-modal__container {
+    width: 250px;
+}
+
+.item-link {
+    font-size: 1rem;
+    justify-content: flex-end;
+}
+
+.section {
+    padding: 2rem 0;
+    justify-content: flex-start;
+}

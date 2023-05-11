@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 768px)">
     <!-- <script defer src="./index.js"></script> -->
 </head>
 <body>
@@ -23,6 +24,13 @@
             <div class="btn-modal"><a class="item-link" href="#section-5">Responsive Tester</a></div>
             <div class="btn-modal"><a class="item-link" href="#section-6">Detección de Dispositivos</a></div>
             <div class="btn-modal"><a class="item-link" href="#section-7">Detección de Cámara Web</a></div>
+            <div class="btn-modal"><a class="item-link" href="#section-8">Geolocalización</a></div>
+            <div class="btn-modal"><a class="item-link" href="#section-9">Filtrar Busqueda</a></div>
+            <div class="btn-modal"><a class="item-link" href="#section-10">Sorteo Digilal</a></div>
+            <div class="btn-modal"><a class="item-link" href="#section-11">Carrusel de Imagenes</a></div>
+            <div class="btn-modal"><a class="item-link" href="#section-12">Sorteo Digilal</a></div>
+            <div class="btn-modal"><a class="item-link" href="#section-13">Sorteo Digilal</a></div>
+
         </nav>
     </section>
     <header class="header">
@@ -116,25 +124,132 @@
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <button class="footer__btn dm-toggle-btn" type="button" id="dark-mode-btn">
-                <!-- &#x263E; -->
-                <span class="icon-lightbulb-on-off dm__lightbulb"></span>
-                <!-- <span class="dm-toggle__icon" aria-disabled="true">&#x263E;</span> -->
-                <!-- <span class="dm__sun" aria-disabled="true">&#x263C;</span> -->
-            </button>
-            <div class="footer__right">
-                <button class="footer__btn scroll-up__btn btn-hidden" type="button" id="scroll-up-btn">
-                    <span class="arrow-up-icon icon-slim-arrow-up"></span>
-                </button>
-                <button id="btn-menu" class="footer__btn hamburger hamburger--squeeze" type="button">
-                    <span class="hamburger-box" aria-disabled="true">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
+         <!-- Geolocation -->
+         <section class="section" id="section-8">
+            <h2 class="sect__title">Geolocalización</h2>
+            <div id="geolocation"></div>
+        </section>
+
+        <!-- Search Filter -->
+        <section class="section" id="section-9">
+            <h2 class="sect__title">Filtrar busqueda</h2>
+            <input type="search" placeholder="Buscar" class="search-filter" id="search-input">
+            <div class="cards-container">
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/tech" alt="Tech" width="200px" height="200px">
+                    <figcaption>Tech</figcaption>
+                </figure class="slider-container">
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/animals" alt="Animals" width="200px" height="200px">
+                    <figcaption>Animals</figcaption>
+                </figure class="slider-container">
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/people" alt="People" width="200px" height="200px">
+                    <figcaption>People</figcaption>
+                </figure class="slider-container">
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/arch" alt="Arch" width="200px" height="200px">
+                    <figcaption>Arch</figcaption>
+                </figure class="slider-container">
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/nature" alt="Nature" width="200px" height="200px">
+                    <figcaption>Nature</figcaption>
+                </figure class="slider-container">
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/tech" alt="Tech" width="200px" height="200px">
+                    <figcaption>Tech</figcaption>
+                </figure class="slider-container">
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/animals" alt="Animals" width="200px" height="200px">
+                    <figcaption>Animals</figcaption>
+                </figure class="slider-container">
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/people" alt="People" width="200px" height="200px">
+                    <figcaption>People</figcaption>
+                </figure class="slider-container">
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/arch" alt="Arch" width="200px" height="200px">
+                    <figcaption>Arch</figcaption>
+                </figure class="slider-container">
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/nature" alt="Nature" width="200px" height="200px">
+                    <figcaption>Nature</figcaption>
+                </figure class="slider-container">
             </div>
-        </footer>
+        </section>
+
+        <!-- Giveaway -->
+        <section class="section" id="section-10">
+            <h2 class="sect__title">Selección Aleatoria</h2>
+            <div class="list-container">
+                <ul class="list-left">
+                    <li class="list-item">JavaScript</li>
+                    <li class="list-item">PHP</li>
+                    <li class="list-item">Java</li>
+                    <li class="list-item">C</li>
+                    <li class="list-item">Python</li>
+                </ul>
+                <ul class="list-right">
+                    <li class="list-item">Ruby</li>
+                    <li class="list-item">Go</li>
+                    <li class="list-item">Visual Basic</li>
+                    <li class="list-item">Rust</li>
+                    <li class="list-item">Perl</li>
+                </ul>
+            </div>
+            <div class="btns-container">
+                <button class="sect__btn" id="ran-select-btn">Buscar Ganador</button>
+                <button class="sect__btn" id="reset-btn">Reset</button>
+            </div>
+        </section>
+
+        <!-- Img Slider 🫡 -->
+        <section class="section slider" id="section-11">
+            <h2 class="sect__title">Carrusel de imágenes</h2>
+            <div class="slider">
+                <figure class="slides-container"">
+                    <img class="slide active" src="./assets/imgs/RicknMorty/mr-poopybutthole.png" alt="">
+                    <img class="slide" src="./assets/imgs/RicknMorty/afraid-morty.png" alt="">
+                    <img class="slide" src="./assets/imgs/RicknMorty/gigant-head.png" alt="">
+                    <img class="slide" src="./assets/imgs/RicknMorty/happy-Rick.png" alt="">
+                    <img class="slide" src="./assets/imgs/RicknMorty/snuffles.png" alt="">
+                </figure>
+            </div>
+            <div class="btns-container">
+                <button class="sect__btn slider-btn" id="prev-btn" style="background-image: url(./assets/icons/arrow-left-icon.svg);"></button>
+                <button class="sect__btn slider-btn" id="next-btn" style="background-image: url(./assets/icons/arrow-right-icon.svg);"></button>
+            </div>
+        </section>
+
+        <!-- Giveaway -->
+        <section class="section" id="section-12">
+            <h2 class="sect__title">Selección Aleatoria</h2>
+            <div class="list-container">
+            </div>
+            <div class="btns-container">
+                <button class="sect__btn" id="ran-select-btn">Buscar Ganador</button>
+                <button class="sect__btn" id="reset-btn">Reset</button>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <button class="footer__btn dm-toggle-btn" type="button" id="dark-mode-btn">
+            <!-- &#x263E; -->
+            <span class="icon-lightbulb-on-off dm__lightbulb"></span>
+            <!-- <span class="dm-toggle__icon" aria-disabled="true">&#x263E;</span> -->
+            <!-- <span class="dm__sun" aria-disabled="true">&#x263C;</span> -->
+        </button>
+        <div class="footer__right">
+            <button class="footer__btn scroll-up__btn btn-hidden" type="button" id="scroll-up-btn">
+                <span class="arrow-up-icon icon-slim-arrow-up"></span>
+            </button>
+            <button id="btn-menu" class="footer__btn hamburger hamburger--squeeze" type="button">
+                <span class="hamburger-box" aria-disabled="true">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
     </main>
     <script src="./js/index.js" type="module"></script>
 </body>

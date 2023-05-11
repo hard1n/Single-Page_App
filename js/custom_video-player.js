@@ -31,7 +31,7 @@ export default function videoPlayer(player, controls, playPauseBtn, capture, pic
             $player.requestPictureInPicture();
         }
     }
-    
+
     /** Eventos **/
     d.addEventListener('click', e => {
         // Boton play/pausa
