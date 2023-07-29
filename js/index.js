@@ -14,6 +14,11 @@ import getGeolocation from "./geolocation.js";
 import searchFilter from "./search_filter.js";
 import randomSelection from "./random_selection.js";
 import imgSlider from "./imgs_slider.js";
+import scrollSpy from "./scroll_spy.js";
+import autoplayVid from "./video_autoplay.js"; 
+import validateForm from "./form_validator.js";
+import contactFormValidator from "./valid_contact_form.js";
+import textToSpeech from "./text_to_speech.js";
 
 const d = document;
 
@@ -28,12 +33,12 @@ d.addEventListener("DOMContentLoaded", e => {
     // Funcion del boton scroll-up
     scrollTop("scroll-up-btn");
     // Funcion para cargar contenido responsive en Mobile y Desktop
-    /* Video */
+        /* Video */
     responsiveMedia("youtube", 
     "(min-width:1024px)", 
     `<a href="https://youtu.be/JjU-4lFPSDQ" target="_blank">Película: Difícil Para Salir (YouTube)</a>`, 
     `<h3>Película: Dificil Para Salir</h3><iframe width="560" height="315" src="https://www.youtube.com/embed/JjU-4lFPSDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`);
-    /* Mapa */
+        /* Mapa */
     responsiveMedia("gmaps", 
     "(min-width:1024px)", 
     `<a href="https://goo.gl/maps/qUC981itAwAvkB1BA" target="_blank">Rodaje en: Navarrete (Google Maps)</a>`, 
@@ -54,6 +59,15 @@ d.addEventListener("DOMContentLoaded", e => {
     randomSelection('.list-item', '#ran-select-btn', '#reset-btn')
     // Images Slider
     imgSlider();
+    // Scroll Spy
+    scrollSpy();
+    //Autoplay Video
+    autoplayVid();
+    //Validate Form
+    // validateForm();
+    contactFormValidator();
+    //Text to speech
+    textToSpeech();
 });
 
 d.addEventListener("keydown", e => {

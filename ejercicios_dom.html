@@ -11,33 +11,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 750px)">
     <!-- <script defer src="./index.js"></script> -->
 </head>
 <body>
-    <section class="nav-modal">
-        <nav class="nav-modal__container">
-            <div class="btn-modal"><a class="item-link" href="#section-1">Reloj Digital y Alarma sonora</a></div>
-            <div class="btn-modal"><a class="item-link" href="#section-2">Eventos del teclado</a></div>
-            <div class="btn-modal"><a class="item-link" href="#section-3">Cuenta Regresiva</a></div>
-            <div class="btn-modal"><a class="item-link" href="#section-4">Responsive con JavaScript</a></div>
-            <div class="btn-modal"><a class="item-link" href="#section-5">Responsive Tester</a></div>
-            <div class="btn-modal"><a class="item-link" href="#section-6">Detección de Dispositivos</a></div>
-            <div class="btn-modal"><a class="item-link" href="#section-7">Detección de Cámara Web</a></div>
-            <div class="btn-modal"><a class="item-link" href="#section-8">Geolocalización</a></div>
-            <div class="btn-modal"><a class="item-link" href="#section-9">Filtrar Busqueda</a></div>
-            <div class="btn-modal"><a class="item-link" href="#section-10">Sorteo Digilal</a></div>
-            <div class="btn-modal"><a class="item-link" href="#section-11">Carrusel de Imagenes</a></div>
-            <div class="btn-modal"><a class="item-link" href="#section-12">Sorteo Digilal</a></div>
-            <div class="btn-modal"><a class="item-link" href="#section-13">Sorteo Digilal</a></div>
-
-        </nav>
-    </section>
     <header class="header">
         <h1 class="title">Ejercicios del DOM</h1>
     </header>
+    <aside class="nav-modal">
+        <nav class="nav-modal__container">
+            <div><a class="item-link" data-scroll-spy href="#section-1">Reloj y Alarma sonora</a></div>
+            <div><a class="item-link" data-scroll-spy href="#section-2">Eventos del teclado</a></div>
+            <div><a class="item-link" data-scroll-spy href="#section-3">Cuenta Regresiva</a></div>
+            <div><a class="item-link" data-scroll-spy href="#section-4">Responsive con JavaScript</a></div>
+            <div><a class="item-link" data-scroll-spy href="#section-5">Responsive Tester</a></div>
+            <div><a class="item-link" data-scroll-spy href="#section-6">Detección de Dispositivos</a></div>
+            <div><a class="item-link" data-scroll-spy href="#section-7">Detección de Cámara Web</a></div>
+            <div><a class="item-link" data-scroll-spy href="#section-8">Geolocalización</a></div>
+            <div><a class="item-link" data-scroll-spy href="#section-9">Filtrar Busqueda</a></div>
+            <div><a class="item-link" data-scroll-spy href="#section-10">Sorteo Digilal</a></div>
+            <div><a class="item-link" data-scroll-spy href="#section-11">Carrusel de Imagenes</a></div>
+            <div><a class="item-link" data-scroll-spy href="#section-12">Auto Video</a></div>
+            <div><a class="item-link" data-scroll-spy href="#section-13">Formulario de contacto</a></div>
+            <div><a class="item-link" data-scroll-spy href="#section-14">Narrador por voz</a></div>
+            <!-- <div><a class="item-link" data-scroll-spy href="#section-15">Validar Formulario</a></div> -->
+        </nav>
+    </aside>
     <main>
-        <section class="section" id="section-1">
+        <section class="section" data-scroll-spy id="section-1">
             <header class="section__header">
                 <h2 class="sect__title">Reloj Digital y Alarma sonora</h2>
             </header>
@@ -56,7 +57,7 @@
                 </div>
             </section>
         </section>
-        <section class="section" id="section-2">
+        <section class="section" data-scroll-spy id="section-2">
             <h2 class="sect__title">Eventos del teclado</h2>
             <section class="key-tracker-container">
                 <div class="key-tracker__pointer" id="ball-pointer">
@@ -67,7 +68,7 @@
                 </div>
             </section>
         </section>
-        <section class="section" id="section-3">
+        <section class="section" data-scroll-spy id="section-3">
             <h2 class="sect__title">Cuenta Regresiva</h2>
             <secttion class="section__main">
                 <div class="countdown__header">
@@ -86,12 +87,12 @@
                 </div>
             </secttion>
         </section>
-        <section class="section" id="section-4">
+        <section class="section" data-scroll-spy id="section-4">
             <h2 class="sect__title">Responsive con JavaScript</h2>
             <div class="section__div" id="youtube"></div>
             <div class="section__div" id="gmaps"></div>
         </section>
-        <section class="section" id="section-5">
+        <section class="section" data-scroll-spy id="section-5">
             <h2 class="sect__title">Responsive Tester</h2>
             <form action="" class="section__form" id="responsive-tester">
                 <input class="form__input" title="Ingresar una URL" id="fm-input-url" name="direccion" type="url" placeholder="URL" required>
@@ -104,13 +105,13 @@
                 </div>
             </form>
         </section>
-        <section class="section" id="section-6">
+        <section class="section" data-scroll-spy id="section-6">
             <h2 class="sect__title">Detección de dispositivos (User Agent)</h2>
             <div class="info-container" id="user-device"></div>
         </section>
         
         <!-- WebCam Detection -->
-        <section class="section" id="section-7">
+        <section class="section" data-scroll-spy id="section-7">
             <h2 class="sect__title">Detección de Cámara Web</h2>
             <div class="custom-player">
                 <video class="video-webcam" id="webcam" style="width: 100%; max-height: 315px;" autoplay>
@@ -125,18 +126,18 @@
         </section>
 
          <!-- Geolocation -->
-         <section class="section" id="section-8">
+         <section class="section" data-scroll-spy id="section-8">
             <h2 class="sect__title">Geolocalización</h2>
             <div id="geolocation"></div>
         </section>
 
         <!-- Search Filter -->
-        <section class="section" id="section-9">
+        <section class="section" data-scroll-spy id="section-9">
             <h2 class="sect__title">Filtrar busqueda</h2>
             <input type="search" placeholder="Buscar" class="search-filter" id="search-input">
             <div class="cards-container">
                 <figure class="card">
-                    <img src="https://placeimg.com/200/200/tech" alt="Tech" width="200px" height="200px">
+                    <img src="./assets/imgs/RicknMorty/happy-Rick.png" alt="Tech" width="200px" height="200px">
                     <figcaption>Tech</figcaption>
                 </figure class="slider-container">
                 <figure class="card">
@@ -179,7 +180,7 @@
         </section>
 
         <!-- Giveaway -->
-        <section class="section" id="section-10">
+        <section class="section" data-scroll-spy id="section-10">
             <h2 class="sect__title">Selección Aleatoria</h2>
             <div class="list-container">
                 <ul class="list-left">
@@ -203,11 +204,11 @@
             </div>
         </section>
 
-        <!-- Img Slider 🫡 -->
-        <section class="section slider" id="section-11">
+        <!-- Img Slider  -->
+        <section class="section slider" data-scroll-spy id="section-11">
             <h2 class="sect__title">Carrusel de imágenes</h2>
             <div class="slider">
-                <figure class="slides-container"">
+                <figure class="slides-container">
                     <img class="slide active" src="./assets/imgs/RicknMorty/mr-poopybutthole.png" alt="">
                     <img class="slide" src="./assets/imgs/RicknMorty/afraid-morty.png" alt="">
                     <img class="slide" src="./assets/imgs/RicknMorty/gigant-head.png" alt="">
@@ -221,17 +222,104 @@
             </div>
         </section>
 
-        <!-- Giveaway -->
-        <section class="section" id="section-12">
-            <h2 class="sect__title">Selección Aleatoria</h2>
+        <!-- Autoplay Video -->
+        <section class="section" data-scroll-spy id="section-12">
+            <div class="stiky-content">
+                <video class="video-auto" id="video-auto" loop data-auto-vid>
+                    <source src="./assets/media/videos/rick-n-morty-moving-background.mp4" type="video/mp4">
+                </video>
+                <div class="fixed-caption">
+                    <img class="name-img" src="./assets/imgs/RicknMorty/R_&_M_logo_1200x366.png" alt="logo">
+                    <div class="foot-content">
+                        <p>CREATED BY</p>
+                        <p class="creators">JUSTIN ROILAND <span>AND</span> DAN HARMON</p>
+                    </div>
+                </div>
+                <button class="auto-vid_tg-play" id="toggle-play-btn"><i class="icon-play"></i></button>
+            </div>
+            <div class="description-wrapper">
+                <ul class="description-list">
+                    <li>Es una serie de television estadounidense de animacion para adultos.</li>
+                    <li>Creada por Justin Roiland y Dan Harmon en 2013 para <span class="adult-swim">[adult swim]</span></li>
+                    
+                </ul>
+                <ul class="description-list">
+                    <li>La serie sigue las desventuras de un científico, Rick Sanchez, y su fácilmente influenciable nieto, Morty,</li>
+                    <li>quienes pasan el tiempo entre la vida doméstica y los viajes espaciales, temporales e intergalácticos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Validación de formularios -->
+        <section class="section" data-scroll-spy id="section-13">
+            <h2 class="sect__title">Formulario de contacto</h2>
+            <form action="" class="contact-form">
+                <div class="name-wrap">
+                    <div class="input-wrap">
+                        <input type="text" name="name" id="input-name" class="form__input" placeholder="Nombre *" title="Solo letras y espacios" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+
+                        <!-- <div class="error-message">Solo letras y espacios</div> -->
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" name="lastname" id="input-lastname" class="form__input" placeholder="Apellido (opcional)"  title="El apellido solo puede tener letra, espacios y guiones">
+
+                        <!-- <div class="error-message">Solo letras y espacios</div> -->
+                    </div>
+                </div>
+                <div class="input-wrap">
+                    <input type="email" name="email" id="input-email" class="form__input" placeholder="Correo electrónico *" pattern="^[_a-z\d\.]+@[a-z\d]+(\.[a-z]{2,15})+$" title="Escribe tu E-mail" required>
+
+                    <!-- <div class="error-message">Escribe tu E-mail</div> -->
+                </div>
+                <div class="input-wrap">
+                    <input type="text" name="subject" id="input-subject" class="form__input" placeholder="Asunto a tratar *" title="Escribe un asunto o título" required>
+
+                    <!-- <div class="error-message">Escribe el asunto o título</div> -->
+                </div>
+                <div class="input-wrap">
+                    <textarea name="comment" id="text-comment" cols="30" rows="5" class="form__comment" placeholder="Comentario *" data-pattern="^.{1,255}$" title="El mensaje no puede exceder los 255 caracteres" required minlength="10"></textarea>
+
+                    <!-- <div class="error-message">El mensaje no puede exceder los 255 caracteres</div> -->
+                </div>
+                <div class="btns-container">
+                    <input type="submit" class="sect__btn " id="submit-form" value="Enviar"></input>
+                </div>
+                <div class="contact-form__loader none">
+                    <img src="./assets/imgs/ball-triangle.svg" alt="">
+                </div>
+                <div class="contact-form__response none">
+                    <p>&#x2714;</p>
+                </div>
+            </form>
+        </section>
+
+        <section class="section" data-scroll-spy id="section-14">
+            <h2 class="sect__title">Narrador por Voz</h2>
+            <div class="wrap">
+                <select name="idioma" id="speech-select">
+                    <!-- <option value="">Elige una voz</option> -->
+                </select>
+                <div class="input-wrap">
+                    <textarea name="comment" id="text-comment" cols="30" rows="5" class="text-to-play" placeholder="Escribe un texto" required></textarea>
+                </div>
+                <div class="btns-container">
+                    <button class="sect__btn play-text-btn" id="ran-select-btn">
+                        <span>Leer texto</span>
+                        <img class="play-img none" src="./assets/imgs/bars.svg" alt="sound-img">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="section" data-scroll-spy id="section-15">
+            <h2 class="sect__title">section-15</h2>
             <div class="list-container">
             </div>
             <div class="btns-container">
                 <button class="sect__btn" id="ran-select-btn">Buscar Ganador</button>
                 <button class="sect__btn" id="reset-btn">Reset</button>
             </div>
-        </section>
-
+        </section> -->
 
         <!-- Footer -->
         <button class="footer__btn dm-toggle-btn" type="button" id="dark-mode-btn">

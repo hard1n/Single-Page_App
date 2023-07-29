@@ -14,6 +14,19 @@
     --bg-color: #fff;
     --container-width: 1200px;
 }
+/** Fuentes **/
+@font-face {
+    font-family: 'Get Schwifty'; /* Logo */
+    src: url(../assets/fonts/get_schwifty.ttf);
+}
+@font-face {
+    font-family: 'rick & morty credits'; /* Créditos */
+    src: url(../assets/fonts/rick_and_morty_font_by_starriichan_d9h2vl6.ttf);
+}
+@font-face {
+    font-family: 'adult-swim font'; /* [adult swim] */
+    src: url(../assets/fonts/Helvetica_Neue_Condensed_Bold.ttf);
+}
 
 html {    
     scroll-behavior: smooth;
@@ -107,8 +120,8 @@ body {
     border-radius: 50%;
     outline: none;
     transition: all 0.2s ease;
-    height: 50px;
-    width: 50px;
+    height: 3.25rem;
+    width: 3.25rem;
 }
 
 .footer__btn:hover {
@@ -177,9 +190,9 @@ body {
 }
 
 .item-link:hover {
-    background-color: var(--main-color);
+    background-color: var(--main-color-modal);
     color: var(--second-color-modal);
-    /* font-weight: bold; */
+    font-weight: bold;
 }
 
 #btn-menu {
@@ -306,13 +319,13 @@ body {
 /***** Scroll Up btn *****/
 .scroll-up__btn {
     position: fixed;
-    right: calc(65px - 1vw);
+    right: calc(4.5rem - 1vw);
     bottom: 1vh;
-    transform: translate(0, 100%);
+    transform: translateY(100%);
 }
 
 .scroll-up__btn.active {
-    transform: translate(0);
+    transform: translateY(0);
 }
 
 .btn-hidden {
@@ -570,12 +583,21 @@ body {
 
 .card {
     background-color: var(--second-color);
+    border-radius: 1rem;
     color: var(--main-color);
     display: inline-block;
     justify-self: center;
+    overflow: hidden;
     margin: 0.5rem;
     transition: all 0.3s ease-in-out;
-    max-width: 200px;
+    height: 300px;
+    width: 300px;
+}
+
+.card img {
+    height: auto;
+    width: auto;
+    object-fit: contain;
 }
 
 .card figcaption {
@@ -666,4 +688,302 @@ body {
 .slider-btn {
     background-position: center;
     background-repeat: no-repeat;
+}
+
+/** Autoplay Video section - seccion 12 **/
+#section-12 {
+    background-color: #000;
+    transition: all 1s;
+    /* opacity: 0;
+    visibility: hidden; */
+    height: 300vh;
+    position: relative;
+    top: 0;
+    /* z-index: 1; */
+}
+
+.stiky-content {
+    /* background-color: rgba(0,0,0,0.8); */
+    
+    position: sticky;
+    inset: 0 auto;
+    height: 100vh;
+    width: 100%;
+}
+
+.show-section {
+    /* opacity: 1; */
+    /* visibility: visible; */
+}
+
+.video-auto {
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    /* z-index: -1; */
+}
+
+.name-img {
+    margin-top: 3rem;
+    /* position: absolute; */
+    /* inset: 1rem; */
+    width: 80%;
+}
+
+.fixed-caption {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'rick & morty credits';
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    position: absolute;
+    inset: 0;
+    /* z-index: 1; */
+}
+
+.auto-vid_tg-play {
+    border: 2px solid rgba(247, 222, 30, 0.3);
+    border-radius: 50%;
+    background-color: transparent;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    transition: all 0.3s;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.auto-vid_tg-play:hover {
+    border: 2px solid rgba(247, 222, 30, 0.5);
+    color: rgba(247, 222, 30, 0.5);
+    cursor: pointer;
+}
+
+.auto-vid_tg-play *{
+    color: rgba(247, 222, 30, 0.3);
+}
+
+/*Textos*/
+.description-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description-list {
+    color: 	#41b4c9;
+    text-shadow: 1px 1px 2px #000;
+    text-decoration: none;
+    text-align: left;
+    list-style: none;
+    font-family: 'rick & morty credits';
+    font-size: 2rem;
+    margin: 30rem 2rem 0;
+    width: 300px;
+}
+
+.creators {
+    display: flex;
+}
+.creators span {
+    /* AND en creators names */
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 0.2rem 0.5rem 0;
+}
+
+.adult-swim {
+    color: #fff;
+    font-family: 'adult-swim font';
+    font-size: 1.5rem;
+}
+
+/** Sección 13 - Validar formularios **/
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    width: 80%;
+}
+
+.contact-form input {
+    /* border: 1px solid #000; */
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin: 1rem 0 0;
+    transition: 0.3s;
+}
+
+.contact-form input[type="submit"] {
+    /* border: 1px solid #000; */
+    width: 50%;
+}
+
+.empty::placeholder {
+    color: rgb(255,180,180);
+}
+
+.name-wrap {
+    display: grid;
+    width: 100%;
+}
+
+.input-wrap {
+    display: grid;
+    /* position: relative; */
+    /* width: 100%; */
+}
+
+/* .form :nth-child(-n + 2){
+    flex-wrap: nowrap;
+    width: 50%;
+} */
+
+.form__comment,
+textarea {
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 1rem;
+    margin: 1rem 0 0;
+    padding: 0.5rem;
+    resize: none;
+}
+
+.valid {
+    border: 1px solid green;
+    color: green;
+}
+
+.invalid {
+    border: 1px solid red;
+    color: red;
+}
+
+.error-message {
+    color: #fff;
+    display: none;
+    background-color: red;
+    transition: 0.3s ease-in-out;
+    /* margin: 0 0.5rem; */
+    padding: 0.5rem;
+    transform: translateY(-100%);
+    /* visibility: hidden; */
+    /* position: absolute; */
+    z-index: -1;
+}
+
+.error-message.active {
+    display: block;
+    animation: show-error 0.3s 1 normal ease-out both;
+    /* position: fixed;
+    bottom: 0; */
+    width: 100%;
+    transform: translateY(0);
+}
+
+.contact-form__loader,
+.contact-form__response {
+    background-color: rgba(0,0,0,0.6);
+    font-size: 15rem;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    /* width: 80%; */
+    inset: 0;
+    z-index: 100;
+}
+
+.contact-form__response {
+    /* animation: submit-message 1s ease 0s 1 normal none; */
+}
+
+.contact-form__response p {
+    /* color: #41b4c9; */
+    /* transform: translateY(100vh); */
+    animation: submit-message 1s ease 0s 1 normal none;
+    /* transform: rotate(-180deg); */
+}
+
+.none {
+    display: none;
+}
+
+@keyframes submit-message {
+    0% {
+        letter-spacing:1em;
+        filter:blur(12px);
+        opacity:0;
+        transform: scale(0.1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        filter:blur(0);
+        opacity:1;
+        transform: scale(1);
+    }
+    /*0% {
+        letter-spacing:1em;
+        filter:blur(12px);
+        transform: translateY(100vh);
+        transform: rotate(-180deg);
+    }
+    100% {
+        // font-family: 'Get Schwifty';
+        transform: translateY(0);
+        filter:blur(0); 
+        transform: rotate(0deg);
+
+    }*/
+}
+
+@keyframes show-error {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        /* height: auto; */
+        transform: translateY(0);
+    }
+}
+
+/*** Narrador de voz - Seccion 14 ***/
+.play-text-btn {
+    /* display: flex; */
+    border-radius: 2rem;
+    /* animation: alternate 1s ease 0s 1 normal none; */
+    /* animation: spin ease-in 2.5s forwards; */
+    margin-top: 1rem;
+    height: 60px;
+    width: 100px;
+}
+
+.play-img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.play-text-btn.active {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
 }
