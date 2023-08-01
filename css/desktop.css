@@ -65,13 +65,14 @@ main {
 }
 
 .description-wrapper {
-    position: absolute;
+    display: flex;
+    justify-content: space-between;
     inset: 0;
     height: 100vh;
 }
 
 .description-list {
-    width: 300px;
+    /* width: 300px; */
 }
 
 /** Seccion 13 - Validar formulario **/

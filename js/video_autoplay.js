@@ -8,20 +8,8 @@ export default function autoplayVid() {
     // && $video.readyState;
     // let playPromise = $video.play();
 
-    // console.log("Video Tag " + $video);
-    // if (playPromise !== undefined) {
-    //     playPromise.then(() => {
-    //     // Automatic playback started!
-    //     // Show playing UI.
-    //     })
-    //     .catch(error => {
-    //     // Auto-play was prevented
-    //     // Show paused UI.
-    //     console.log(error);
-    //     });
-    // }
-
     const cb = (entries) => {
+        // console.log(entries)
         entries.forEach(entry => {
             // if (entry.isIntersecting){
             //     entry.target.play();
@@ -106,8 +94,8 @@ export default function autoplayVid() {
     })
 }
 
-function textFadeInOut() {
+function scrollTextAnimate() {
     addEventListener('scroll', e => {
 
-    })  
+    })
 }

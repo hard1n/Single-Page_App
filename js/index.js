@@ -19,6 +19,7 @@ import autoplayVid from "./video_autoplay.js";
 import validateForm from "./form_validator.js";
 import contactFormValidator from "./valid_contact_form.js";
 import textToSpeech from "./text_to_speech.js";
+import scrollTextAnimate from "./scroll_text-animation.js";
 
 const d = document;
 
@@ -63,6 +64,8 @@ d.addEventListener("DOMContentLoaded", e => {
     scrollSpy();
     //Autoplay Video
     autoplayVid();
+    // Animate text on scroll
+    scrollTextAnimate();
     //Validate Form
     // validateForm();
     contactFormValidator();

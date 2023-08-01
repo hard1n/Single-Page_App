@@ -6,8 +6,8 @@ export default function scrollSpy() {
 
     let options = {
         // root: d.querySelector("#scrollArea"),
-        // rootMargin: "0px",
-        threshold: [0.5, 0.75],
+        rootMargin: "-50% 0px",
+        threshold: 0
     };
     const cb = (entries) => {
         entries.forEach(el => {
@@ -32,6 +32,5 @@ export default function scrollSpy() {
     }
 
     const observer = new IntersectionObserver(cb, options);
-    
     $sections.forEach(el => observer.observe(el));
 }
