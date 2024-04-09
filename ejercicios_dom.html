@@ -144,46 +144,65 @@
             <h2 class="sect__title">Filtrar busqueda</h2>
             <input type="search" placeholder="Buscar" class="search-filter" id="search-input">
             <div class="cards-container">
+              <template id="card-template">
                 <figure class="card">
-                    <img src="./assets/imgs/RicknMorty/happy-Rick.png" alt="Tech" width="200px" height="200px">
-                    <figcaption>Tech</figcaption>
-                </figure class="slider-container">
-                <figure class="card">
-                    <img src="https://placeimg.com/200/200/animals" alt="Animals" width="200px" height="200px">
-                    <figcaption>Animals</figcaption>
-                </figure class="slider-container">
-                <figure class="card">
-                    <img src="https://placeimg.com/200/200/people" alt="People" width="200px" height="200px">
-                    <figcaption>People</figcaption>
-                </figure class="slider-container">
-                <figure class="card">
-                    <img src="https://placeimg.com/200/200/arch" alt="Arch" width="200px" height="200px">
-                    <figcaption>Arch</figcaption>
-                </figure class="slider-container">
-                <figure class="card">
-                    <img src="https://placeimg.com/200/200/nature" alt="Nature" width="200px" height="200px">
-                    <figcaption>Nature</figcaption>
-                </figure class="slider-container">
-                <figure class="card">
-                    <img src="https://placeimg.com/200/200/tech" alt="Tech" width="200px" height="200px">
-                    <figcaption>Tech</figcaption>
-                </figure class="slider-container">
-                <figure class="card">
-                    <img src="https://placeimg.com/200/200/animals" alt="Animals" width="200px" height="200px">
-                    <figcaption>Animals</figcaption>
-                </figure class="slider-container">
-                <figure class="card">
-                    <img src="https://placeimg.com/200/200/people" alt="People" width="200px" height="200px">
-                    <figcaption>People</figcaption>
-                </figure class="slider-container">
-                <figure class="card">
-                    <img src="https://placeimg.com/200/200/arch" alt="Arch" width="200px" height="200px">
-                    <figcaption>Arch</figcaption>
-                </figure class="slider-container">
-                <figure class="card">
-                    <img src="https://placeimg.com/200/200/nature" alt="Nature" width="200px" height="200px">
-                    <figcaption>Nature</figcaption>
-                </figure class="slider-container">
+                  <img alt="Rick & Morty character" width="200px" height="200px">
+                  <figcaption class="card__caption">
+                    <section class="caption__name">
+                      <h2 class="name"></h2>
+                      <span class="status"><span class="status__icon"></span></span>
+                    </section>
+                    <section class="caption__details">
+                      <span class="char__info">[Últ. ubicación]</span>
+                      <span class="char__location"></span>
+                    </section>
+                    <section class="caption__details">
+                      <span class="char__info">[1ra aparición]</span>
+                      <span class="char__first-saw"></span>
+                    </section>
+                  </figcaption>
+                </figure>
+              </template>
+              <!-- <figure class="card">
+                  <img src="./assets/imgs/RicknMorty/happy-Rick.png" alt="Tech" width="200px" height="200px">
+                  <figcaption>Tech</figcaption>
+              </figure>
+              <figure class="card">
+                  <img src="https://placeimg.com/200/200/animals" alt="Animals" width="200px" height="200px">
+                  <figcaption>Animals</figcaption>
+              </figure>
+              <figure class="card">
+                  <img src="https://placeimg.com/200/200/people" alt="People" width="200px" height="200px">
+                  <figcaption>People</figcaption>
+              </figure>
+              <figure class="card">
+                  <img src="https://placeimg.com/200/200/arch" alt="Arch" width="200px" height="200px">
+                  <figcaption>Arch</figcaption>
+              </figure>
+              <figure class="card">
+                  <img src="https://placeimg.com/200/200/nature" alt="Nature" width="200px" height="200px">
+                  <figcaption>Nature</figcaption>
+              </figure>
+              <figure class="card">
+                  <img src="https://placeimg.com/200/200/tech" alt="Tech" width="200px" height="200px">
+                  <figcaption>Tech</figcaption>
+              </figure>
+              <figure class="card">
+                  <img src="https://placeimg.com/200/200/animals" alt="Animals" width="200px" height="200px">
+                  <figcaption>Animals</figcaption>
+              </figure>
+              <figure class="card">
+                  <img src="https://placeimg.com/200/200/people" alt="People" width="200px" height="200px">
+                  <figcaption>People</figcaption>
+              </figure>
+              <figure class="card">
+                  <img src="https://placeimg.com/200/200/arch" alt="Arch" width="200px" height="200px">
+                  <figcaption>Arch</figcaption>
+              </figure>
+              <figure class="card">
+                  <img src="https://placeimg.com/200/200/nature" alt="Nature" width="200px" height="200px">
+                  <figcaption>Nature</figcaption>
+              </figure> -->
             </div>
         </section>
 
